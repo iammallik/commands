@@ -1,0 +1,37 @@
+		this is a file for git commands (https://githowto.com/bare_repositories) 
+                                            
+
+git hist [--all | --max-count=2] 		//to see history of repo
+
+git remote					>> shows the default name of the remote repository
+
+git remote show [origin]			// sows full details of repo [origin]
+
+git branch -a					>> to see all branches
+
+git fetch					// to update local repo 
+
+git merge origin/master				>> Merge the pulled changes into the local master branch
+
+git pull 					// git pull command is identical to git fetch plus git merge (line 11 + line 13)
+
+git branch --track style origin/style  		>> add a local branch tracking the remote branch. (--> Branch style set up to track remote branch style from origin.)
+
+
+cd ..                                 		// Bare repos (without working directories) are typically needed for sharing.
+git clone --bare hello hello.git		// Creating a bare repository.
+ls hello.git					// Typically repositories ending in ‘.git’ are bare. As you can see there is no working directory in the hello.git repository. 
+						// Actually it is nothing but the .git directory of a non-bare repository.	
+
+
+cd hello					// To add a bare repo as a remote to our original repo.
+git remote add shared ../hello.git		// Let’s add the hello.git repository to our original repository.
+					
+
+
+
+
+
+
+
+
