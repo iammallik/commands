@@ -45,7 +45,15 @@ git push [-f] <remote name> <local_branch_name>:<remote_brnch_name> 	//pushing t
 
 git push -u origin <branch> 						// push a new local branch to a remote Git repository and tracks it too & -u is short for --set-upstream
 
+
+remote show [remote] || git ls-remote [remote]				//  get a full list of remote references and its information  (https://git-scm.com/book/en/v2/Git-Branching-Remote-Branches)
+
  
+---------------------------------------------------------HEROKU-----------------------------
+
+heroku logs --app iamplus-skills-weather-demo
+
+heroku logs --remote demo
 
 
 
