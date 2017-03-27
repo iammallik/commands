@@ -1,11 +1,15 @@
 		this is a file for git commands (https://githowto.com/bare_repositories) 
                                             
 
-git hist [--all | --max-count=2] 		//to see history of repo
+git hist [--all | --max-count=2] 		// to see history of repo
 
 git remote -v					>> shows the default name of the remote repository
 
-git remote rename origin destination		//Change remote name from 'origin' to 'destination'
+git remote rename origin destination		// Change remote name from 'origin' to 'destination'
+
+git branch -m new-name 				// rename a branch
+
+git branch -m old-name new-name			// rename brach from another branch
 
 git remote show [origin]			// shows full details of repo [origin]
 
@@ -33,7 +37,7 @@ git remote add shared ../hello.git		// Let’s add the hello.git repository to o
 
 
 
-git [log|diff] origin/master..HEAD			// Viewing Unpushed Git Commits
+git [log|diff] origin/master..HEAD					// Viewing Unpushed Git Commits
 
 
 									// To push up through a given commit, you can write:
@@ -41,15 +45,35 @@ git [log|diff] origin/master..HEAD			// Viewing Unpushed Git Commits
 git push <remotename> <commit SHA>:<remotebranchname>			// provided <remotebranchname> already exists on the remote. 
 									// (If it doesn't, you can use git push <remotename> <commit SHA>:refs/heads/<remotebranchname> to autocreate it.)
 
-git push [-f] <remote name> <local_branch_name>:<remote_brnch_name> 	//pushing to remote from non local branch, for more: https://git-scm.com/book/en/v2/Git-Internals-The-Refspec (-f: forece)
-
+git push [-f] <remote name> <local_branch_name>:<remote_brnch_name> 	// pushing to remote from non local branch, for more: https://git-scm.com/book/en/v2/Git-Internals-The-Refspec (-f: forece)
+ 
 git push -u origin <branch> 						// push a new local branch to a remote Git repository and tracks it too & -u is short for --set-upstream
 
 
-remote show [remote] || git ls-remote [remote]				//  get a full list of remote references and its information  (https://git-scm.com/book/en/v2/Git-Branching-Remote-Branches)
+remote show [remote] || git ls-remote [remote]				// get a full list of remote references and its information  (https://git-scm.com/book/en/v2/Git-Branching-Remote-Branches)
 
- 
----------------------------------------------------------HEROKU-----------------------------
+
+									Deleting branches
+
+git push <remote name> --delete <branch name>				// this deletes the remte branch
+
+git branch --delete <branch name>					// this deletes local branch, you have to delete from anither branch
+
+git checkout <branch name> &&  git branch --unset-upstream		// stop tracking remote branch 
+
+
+
+---------------------------------------------------------LINUX------------------------------!
+
+ ---------------------------------------------------------------------------  GIT --------------------------------
+echo "deletes the content of file and writes this text" > filename
+echo "appends this in file" >> filename
+cat > file1								// creates file 
+cat filename1 and filename2 						// shows contents of files
+rm -rf mydir 								// delete file , r- recursive, f-without asking before deleting each file
+
+
+---------------------------------------------------------HEROKU-----------------------------!
 
 heroku logs --app iamplus-skills-weather-demo
 
