@@ -1,0 +1,160 @@
+
+
+
+        mmm vendor/aneeda/apps/SystemUI
+        source build/envsetup.sh
+	lunch 16
+	adb push out/target/product/IP2_BSP/system/priv-app/IamSystemUI/IamSystemUI.apk system/priv-app/IamSystemUI
+	git checkout -b v2 iamplus/v2
+
+
+___________________________________________________flash_____________________________________
+	adb reboot bootloader
+	sudo fastboot -i 0x489 flash system /home/weedboy/flash_ATT_files/IP2-0-1220.290A-1C0C-system.img
+	sudo fastboot -i 0x489 flash boot /home/weedboy/flash_ATT_files/IP2-0-1220.290A-1C0C-boot.img
+	sudo fastboot -i 0x489 -w
+	sudo fastboot -i 0x489 reboot
+________________________________________________________________
+	echo "node_modules" >> .gitignore  //adding files to git ignore
+	git log
+	git commit --amend
+	git status
+	git checkout v2
+	git pull
+	git review -d I4f2ca8e8ee75a378dfdf501fb8684f09106fae88
+	git log
+ 	git show
+	nautilus .
+ 	git rm res/drawable-nodpi/iam_airplane_mode.png
+	git rebase v2
+
+____________________________
+	git remote -v
+	iamplus	ssh://int.iamplus.com:29418/v2/Telephony (fetch)
+	iamplus	ssh://int.iamplus.com:29418/v2/Telephony (push)
+
+	git remote add gerrit ssh://int.iamplus.com:29418/v2/Telephony
+	git review -s
+	git review v2
+	*git pull iamplus v2
+
+	mmm -B frameworks/base/ && adb root && adb remount && adb push out/target/product/IP2_BSP/system/framework/framework.jar /system/framework  &&  true && adb shell am restart
+
+
+	git reset HEAD .idea/
+	git checkout iamplus/v2
+	git checkout -b set417_new
+	git pull iamplus v2
+	git branch -a
+	git cherry-pick 21f19205e6d5605352c8df2ded648aa7df255d78
+	git log
+	*git branch --set-upstream-to=v2
+-------------------------------------------
+	git checkout -b fb_3
+	git cherry-pick fcd38bbec1f19260d450f8c729185cbe5d92de6e
+	git status
+	git mergetool
+	git status
+	rm redColoFiles
+	git cherry-pick --continue
+	git status
+	git push -v gerrit HEAD:refs/for/master/profile
+------------------------------------------------------
+	git reset --hard 8da4b2324880c4e9709eb6bcafd35b4f4089cc2a
+	git status
+	git checkout iamplus/v2
+	git pull iamplus v2
+	git branch
+	git status
+-----------------------------------------------------------
+	mmm -B frameworks/base/core/res/ && mmm frameworks/base/ && mmm frameworks/base/policy/ && mmm frameworks/base/services/ && mmm frameworks/base/ && adb root && adb remount   && adb push out/target/product/IP2_BSP/system/framework/framework-res.apk /system/framework && adb push out/target/product/IP2_BSP/system/framework/framework.jar /system/framework  && adb push out/target/product/IP2_BSP/system/framework/android.policy.jar /system/framework && adb push out/target/product/IP2_BSP/system/framework/services.jar /system/framework &&  true && adb shell am restart
+
+Remove the -B option if you don't want to clean build
+
+-----------------------------------------------------------
+
+git clone ssh://int.iamplus.com:29418/v2/browser
+cd browser
+
+To build :
+
+./gradlew assembleDebug
+
+APK will be present in ./build/outputs/apk/browser-debug.apk
+
+In AndroidManifest.xml increment the version number. From 100 to 101 etc..
+
+adb install -r ./build/outputs/apk/browser-debug.apk
+
+Check if the installed APK is being used :
+
+adb shell pm path com.iamplus.browserapp
+adb shell pm path com.iamplus.clock
+
+The path should start with /data/app/. This is to make sure it has overriden the system app.
+
+Start browser :
+
+adb shell am start -a android.intent.action.VIEW -d https://youtube.com com.iamplus.browserapp
+
+Change URL to suit your needs.
+------------------------------------------------------------------------------------------------------
+echo $JAVA_HOME;
+export JAVA_HOME=	
+
+
+------------------------------------------------------Git Managing multiple environments--------------------------
+ 
+1)ssh-keygen -t rsa -C "your-email-address"       	//create a neww SSH key
+
+2)vim ~/.ssh/id_rsa_COMPANY.pub 			// attach it in your GITHUB online account at new SSH key with your favourite title
+
+3)ssh-add ~/.ssh/id_rsa_COMPANY      			// attach new key to your SSH
+
+	if  WARNING: UNPROTECTED PRIVATE KEY FILE!
+
+		1)chmod 700 .ssh 2)chmod 600 .ssh/id_rsa 3)chmod 644 .ssh/id_rsa.pub // retry to add new key to ssh. you would see 'Identity added' message.
+
+4) add details in CONFIG file.
+
+	touch ~/.ssh/config
+	vim config
+
+	Host github-COMPANY
+  	HostName github.com
+  	User git
+  	IdentityFile ~/.ssh/id_rsa_COMPANY
+
+5) you are done.
+
+
+
+
+
+
+---------------------------------------------------------------------------  Command Line --------------------------------
+echo "deletes the content of file and writes this text" > filename
+echo "appens this in file" >> filename
+cat > file1						// creates file 
+cat filename1 and filename2 				// shows contents of files
+rm -rf mydir 						// delete file , r- recursive, f-without asking before deleting each file
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+	
+	
+
+
+
