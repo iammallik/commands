@@ -1,0 +1,11 @@
+
+sudo service rabbitmq-server start			# To start the service:
+
+
+sudo service rabbitmq-server stop			# To stop the service:
+
+
+sudo service rabbitmq-server restart			# To restart the service:
+
+
+sudo service rabbitmq-server status			# To check the status:

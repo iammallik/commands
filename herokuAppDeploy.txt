@@ -1,0 +1,45 @@
+
+
+*************************************
+
+git config user.name (|| -list  )       		// ensure you have git installed
+
+cd myapp
+
+git init
+
+git add .
+
+git status      					// check weather node-modules folder is in green color
+
+git reset node-module             			// remove from git if node-modules added
+
+rm -rf node_modules && npm install --production;	// delete node-modules directory
+
+heroku local web               				// install dependency if you get error eg.; install jsonfile --save
+
+git commit -m "my first commit"   			// heroku create
+
+git remote -v						// check heroku remote added
+
+git push heroku master           			// build the app
+
+heroku ps:scale web=1					// start server with 1 dyno
+
+-----------------------------------------
+
+git add -u .
+
+git commit -m "second commit"
+
+git push heroku master
+
+
+*************************************
+
+heroku config --remote staging  			// check heroku config
+
+
+
+
+

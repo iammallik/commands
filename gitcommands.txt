@@ -13,7 +13,7 @@ git branch -m old-name new-name			// rename brach from another branch
 
 git remote show [origin]			// shows full details of repo [origin]
 
-git branch -a					>> to see all branches
+git branch [-a|-vva]				>> to see all branches | remote states
 
 git fetch					// to update local repo 
 
@@ -65,7 +65,6 @@ git checkout <branch name> &&  git branch --unset-upstream		// stop tracking rem
 
 ---------------------------------------------------------LINUX------------------------------!
 
- ---------------------------------------------------------------------------  GIT --------------------------------
 echo "deletes the content of file and writes this text" > filename
 echo "appends this in file" >> filename
 cat > file1								// creates file 
