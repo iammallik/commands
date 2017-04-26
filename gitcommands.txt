@@ -1,15 +1,17 @@
 		this is a file for git commands (https://githowto.com/bare_repositories) 
                                             
 
-git hist [--all | --max-count=2] 		// to see history of repo
+git hist [--all | --max-count=2] 			// to see history of repo
 
-git remote -v					>> shows the default name of the remote repository
+git remote -v						>> shows the default name of the remote repository
 
-git remote rename origin destination		// Change remote name from 'origin' to 'destination'
+git remote rename origin destination			// Change remote name from 'origin' to 'destination'
 
-git branch -m new-name 				// rename a branch
+git branch -m new-name 					// rename a branch
 
-git branch -m old-name new-name			// rename brach from another branch
+git branch -m old-name new-name				// rename brach from another branch
+
+git remote add origin https://github.com/user/repo.git	// adding remote as origin(name)
 
 git remote show [origin]			// shows full details of repo [origin]
 
@@ -19,7 +21,7 @@ git fetch					// to update local repo
 
 git merge origin/master				>> Merge the pulled changes into the local master branch
 
-git pull 					// git pull command is identical to git fetch plus git merge (line 12 + line 14)
+git pull 					// git pull command is identical to git fetch plus git merge (previous two commands)
 
 git branch --track style origin/style  		>> add a local branch tracking the remote branch. (--> Branch style set up to track remote branch style from origin.)
 
@@ -53,7 +55,7 @@ git push -u origin <branch> 						// push a new local branch to a remote Git rep
 remote show [remote] || git ls-remote [remote]				// get a full list of remote references and its information  (https://git-scm.com/book/en/v2/Git-Branching-Remote-Branches)
 
 
-									Deleting branches
+									--Deleting branches--
 
 git push <remote name> --delete <branch name>				// this deletes the remte branch
 
@@ -66,10 +68,17 @@ git checkout <branch name> &&  git branch --unset-upstream		// stop tracking rem
 ---------------------------------------------------------LINUX------------------------------!
 
 echo "deletes the content of file and writes this text" > filename
+
 echo "appends this in file" >> filename
+
 cat > file1								// creates file 
+
 cat filename1 and filename2 						// shows contents of files
+
 rm -rf mydir 								// delete file , r- recursive, f-without asking before deleting each file
+
+grep -inrlw "findThisString" /dir/file					// r- recursive, n-line number, i-ignore case, l-list files only, w-match whole word 
+
 
 
 ---------------------------------------------------------HEROKU-----------------------------!

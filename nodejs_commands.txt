@@ -6,16 +6,15 @@
 
 $ express my_app			//generate skeleton
 
-
 $ cd my_app && npm install		// install dependencies:
-
 
 $ DEBUG=yahoo_weather:* npm start	// run the app:
 
-
-http://127.0.0.1:3000/			//start webpage	
+http://127.0.0.1:3000/			// start webpage	
 
 echo .env >> .gitignore                 // to ignore .echo in git
+
+node xyz.js				// run xyz javascript file with node
 
 
 --------------------------------------------------------------------------

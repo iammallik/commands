@@ -26,6 +26,8 @@ git push heroku master           			// build the app
 
 heroku ps:scale web=1					// start server with 1 dyno
 
+heroku git:remote -a falling-wind-1624 -r myApp		//adding heroku remote falling-wind-1624 to git with name myApp
+
 -----------------------------------------
 
 git add -u .
