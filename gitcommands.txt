@@ -35,6 +35,7 @@ ls hello.git					// Typically repositories ending in ‘.git’ are bare. As you
 cd hello					// To add a bare repo as a remote to our original repo.
 git remote add shared ../hello.git		// Let’s add the hello.git repository to our original repository.
 
+gitk HEAD @{u}					// to see merge conflicts
 
 
 
