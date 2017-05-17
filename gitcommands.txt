@@ -55,6 +55,12 @@ git push -u origin <branch> 						// push a new local branch to a remote Git rep
 
 remote show [remote] || git ls-remote [remote]				// get a full list of remote references and its information  (https://git-scm.com/book/en/v2/Git-Branching-Remote-Branches)
 
+git show <treeish>							// to see changes of a commit
+
+git show <treeish>:<file>						// seeing a specific commit change in a file
+
+git show HEAD~4:<file>							// to want to go back four commits from our current HEAD in file
+
 
 									--Deleting branches--
 
