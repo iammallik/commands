@@ -38,6 +38,11 @@ git remote add shared ../hello.git		// Let’s add the hello.git repository to o
 gitk HEAD @{u}					// to see merge conflicts
 
 
+git reset --hard <COMMIT -ID>
+git reset --hard HEAD~<n>			// command to revert the commit
+git reset --help
+
+
 
 
 git [log|diff] origin/master..HEAD					// Viewing Unpushed Git Commits
