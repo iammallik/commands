@@ -26,7 +26,7 @@ git push heroku master           			// build the app
 
 heroku ps:scale web=1					// start server with 1 dyno
 
-heroku git:remote -a falling-wind-1624 -r myApp		//adding heroku remote falling-wind-1624 to git with name myApp
+heroku git:remote -a falling-wind-1624 -r myApp		//adding heroku remote falling-wind-1624 to git and rename to myApp
 
 -----------------------------------------
 
@@ -40,6 +40,10 @@ git push heroku master
 *************************************
 
 heroku config --remote staging  			// check heroku config
+
+heroku logs --app iamplus-skills-weather-demo
+
+heroku logs --remote demo
 
 
 
