@@ -45,8 +45,9 @@ git reset --help
 git reflog 					// history of what's been happening on the head of your branches
 
 
-git [log|diff] origin/master..HEAD					// Viewing Unpushed Git Commits
-
+git [log|diff] origin/master..HEAD					
+git log --graph [--all|<branch name>] --decorate --oneline				// Viewing Unpushed Git Commits			
+gitk --all
 
 									// To push up through a given commit, you can write:
              								// git - pushing specific commit
@@ -103,11 +104,7 @@ grep -inrlw "findThisString" /dir/file					// r- recursive, n-line number, i-ign
 
 
 
----------------------------------------------------------HEROKU-----------------------------!
 
-heroku logs --app iamplus-skills-weather-demo
-
-heroku logs --remote demo
 
 
 
