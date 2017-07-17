@@ -25,6 +25,8 @@ git pull 					// git pull command is identical to git fetch plus git merge (prev
 
 git branch --track style origin/style  		>> add a local branch tracking the remote branch. (--> Branch style set up to track remote branch style from origin.)
 
+git diff --staged				// to examine the changes I have not yet committed
+
 
 cd ..                                 		// Bare repos (without working directories) are typically needed for sharing.
 git clone --bare hello hello.git		// Creating a bare repository.

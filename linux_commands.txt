@@ -15,7 +15,9 @@ rm -rf mydir 								// delete file , r- recursive, f-without asking before dele
 grep -inrlw "findThisString" /dir/file					// r- recursive, n-line number, i-ignore case, l-list files only, w-match whole word 
 
 
-wc -[l w c m L] <filenames>: Prints the number of lines in a file, number of words, count of bytes, count of characters, length of the longest line
+wc -[l w c m L] <filenames>						// Prints the number of lines in a file, number of words, count of bytes, count of characters, length of the longest line
+
+history | head -n 10 [head|tail -n 10 FILE]				// prints first/last 10 lines of history
 
 
 
