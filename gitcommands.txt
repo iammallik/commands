@@ -21,9 +21,11 @@ git fetch					// to update local repo
 
 git merge origin/master				>> Merge the pulled changes into the local master branch
 
-git pull 					// git pull command is identical to git fetch + git merge (previous two commands)
+git pull 					// git pull command is identical to git fetch plus git merge (previous two commands)
 
 git branch --track style origin/style  		>> add a local branch tracking the remote branch. (--> Branch style set up to track remote branch style from origin.)
+
+git diff --staged				// to examine the changes I have not yet committed
 
 
 cd ..                                 		// Bare repos (without working directories) are typically needed for sharing.
@@ -85,8 +87,9 @@ git branch -d <branch name>						// this deletes local branch, you have to delet
 
 git checkout <branch name> &&  git branch --unset-upstream		// stop tracking remote branch 
 
+git clean -[n | f]							// to delete untracked files, f-force, n-shows filess to be deleted
 
-
+git remote prune origin [--dry-run]					// clean up remote branches, dry-run show which branches are to be removed									
 
 ---------------------------------------------------------LINUX------------------------------!
 
