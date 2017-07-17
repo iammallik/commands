@@ -71,6 +71,8 @@ git show HEAD~n:<file>							// to want to go back 'n' commits from our current 
 
 git difftool <commit> [<commit>] file1.txt        			// to see the diff between two commits
 
+git difftool <commmit>:file_1 <commit>:file_2				// same as above
+
 git branch --no-merged master						// to list branches with commits not merged into master
 
 git cherry -v master <branch>						// to list the relevant commits
@@ -91,19 +93,6 @@ git clean -[n | f]							// to delete untracked files, f-force, n-shows filess t
 
 git remote prune origin [--dry-run]					// clean up remote branches, dry-run show which branches are to be removed									
 
----------------------------------------------------------LINUX------------------------------!
-
-echo "deletes the content of file and writes this text" > filename
-
-echo "appends this in file" >> filename
-
-cat > file1								// creates file 
-
-cat filename1 and filename2 						// shows contents of files
-
-rm -rf mydir 								// delete file , r- recursive, f-without asking before deleting each file
-
-grep -inrlw "findThisString" /dir/file					// r- recursive, n-line number, i-ignore case, l-list files only, w-match whole word 
 
 
 
