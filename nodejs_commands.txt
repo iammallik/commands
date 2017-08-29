@@ -28,6 +28,8 @@ $npm prune	// removes packages not depended on by your project according to your
 
 $npm outdated	// tells you which installed packages are outdated with respect to what is current in the npm registry but allowable by the version definition in your package.json
 
+killall node	// kills all node servers
+
 
 
 

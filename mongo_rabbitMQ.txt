@@ -1,0 +1,32 @@
+
+sudo service rabbitmq-server start			# To start the service:
+
+
+sudo service rabbitmq-server stop			# To stop the service:
+
+
+sudo service rabbitmq-server restart			# To restart the service:
+
+
+sudo service rabbitmq-server status			# To check the status:
+
+
+
+
+
+
+
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------ 
+cd /var/log/mongodb
+sudo chown -R mongodb:mongodb .
+
+cd /var/lib/mongodb
+sudo chown -R mongodb:mongodb .
+
+sudo service mongod [start | status |status]
+
+
+sudo mongod --repair
+sudo service mongod stop

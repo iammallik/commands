@@ -19,6 +19,8 @@ wc -[l w c m L] <filenames>						// Prints the number of lines in a file, number
 
 history | head -n 10 [head|tail -n 10 FILE]				// prints first/last 10 lines of history
 
+ps aux									// list running processes with full desrcription
+
 
 
 
