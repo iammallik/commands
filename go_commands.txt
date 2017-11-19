@@ -1,0 +1,23 @@
+
+-----------------------------------------installation----------------------
+//https://golang.org/doc/install
+
+
+Download the archive and extract it into /usr/local, creating a Go tree in /usr/local/go. For example:
+
+tar -C /usr/local -xzf go$VERSION.$OS-$ARCH.tar.gz
+Choose the archive file appropriate for your installation. For instance, if you are installing Go version 1.2.1 for 64-bit x86 on Linux, the archive you want is called go1.2.1.linux-amd64.tar.gz.
+
+(Typically these commands must be run as root or through sudo.)
+
+Add /usr/local/go/bin to the PATH environment variable. You can do this by adding this line to your /etc/profile (for a system-wide installation) or $HOME/.profile:
+
+export PATH=$PATH:/usr/local/go/bin
+--------------------------------------------------
+
+$ cd $HOME/go/src/hello
+$ go build
+The command above will build an executable named hello in the directory alongside your source code. Execute it to see the greeting:
+
+$ ./hello
+hello, world
