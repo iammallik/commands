@@ -1,0 +1,25 @@
+
+//https://docs.docker.com/engine/reference/commandline/run/#publish-or-expose-port--p-expose
+
+//https://nodejs.org/en/docs/guides/nodejs-docker-webapp/	
+
+1) docker build -t <image_name> .  // t: temporary tty
+
+2) docker images // listing images 
+
+3) docker run -d --rm -P  latest_skill1   // d: detach, p: publish ports rm:remove_container_at_exit
+
+4) docker rmi <image_id>
+
+5) docker rm <container_id>
+
+6) docker start -ai <container_id> // a:attached i:interactive
+
+7) docker port <container_id>
+
+8) docker [stop/kill] <container_id>
+
+9) docker ps // listing containers
+
+10) docker logs <c-id>
+
