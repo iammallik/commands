@@ -1,0 +1,9 @@
+
+redis-4.0.7/src/redis-server #to run redis on cl
+
+reis-cli PING #to check server running
+
+127.0.0.1:6379 #url
+
+
+sudo -u postgres -i / sudo -u postgres psql

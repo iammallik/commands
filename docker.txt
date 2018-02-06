@@ -1,13 +1,13 @@
 
 //https://docs.docker.com/engine/reference/commandline/run/#publish-or-expose-port--p-expose
 
-//https://nodejs.org/en/docs/guides/nodejs-docker-webapp/	
+//https://nodejs.org/en/docs/guides/nodejs-docker-webapp/
 
-1) docker build -t <image_name> .  // t: temporary tty
+1) sudo usermod -a -G docker $USER  // to add user name to docker group, so that you no need to use sudo evrytime
 
-2) docker images // listing images 
+2) docker build -t <image_name> .  // t: temporary tty
 
-3) docker run -d --rm -P  latest_skill1   // d: detach, p: publish ports rm:remove_container_at_exit
+3) docker run -d --rm -P  <image>   // d: detach, p: publish ports rm:remove_container_at_exit
 
 4) docker rmi <image_id>
 
@@ -23,3 +23,4 @@
 
 10) docker logs <c-id>
 
+11) docker images // listing images
