@@ -1,4 +1,3 @@
-
 redis-4.0.7/src/redis-server #to run redis on cl
 
 reis-cli PING #to check server running
@@ -7,3 +6,9 @@ reis-cli PING #to check server running
 
 
 sudo -u postgres -i / sudo -u postgres psql
+psql postgres://postgres:postgres@localhost:5432/
+
+>> \dt		#show tables
+>> CREATE DATABASE name;
+>> DROP DATABASE [ IF EXISTS ] name;
+>> \connect | \c DBNAME;
