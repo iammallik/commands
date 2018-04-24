@@ -1,16 +1,16 @@
-		this is a file for git commands (https:#githowto.com/bare_repositories) 
-                                            
+		this is a file for git commands (https:#githowto.com/bare_repositories)
 
-git hist [--all | --max-count=2] 			# to see history of repo
 
-git remote -v						>> shows the default name of the remote repository
+git hist [--all | --max-count=2] 					# to see history of repo
 
-git remote rename origin destination			# Change remote name from 'origin' to 'destination'
+git remote -v										# shows the default name of the remote repository
 
-git branch -m new-name 					# rename a branch
+git remote rename origin destination				# Change remote name from 'origin' to 'destination'
 
-git branch -m old_branch new_branch         		# Rename branch locally    
-git push origin :old_branch                 		# Delete the old branch    
+git branch -m new-name 								# rename a branch
+
+git branch -m old_branch new_branch         		# Rename branch locally
+git push origin :old_branch                 		# Delete the old branch
 git push --set-upstream origin new_branch   		# Push the new branch, set local branch to track the new remote
 
 git remote add origin https:#github.com/user/repo.git	# adding remote as origin(name)
@@ -19,65 +19,65 @@ git remote show [origin]			# shows full details of repo [origin]
 
 git branch [-a|-vva]				>> to see all branches | remote states
 
-git fetch					# to update local repo 
+git fetch							# to update local repo
 
 git merge origin/master				>> Merge the pulled changes into the local master branch
 
-git pull 					# git pull command is identical to git fetch plus git merge (previous two commands)
+git pull 							# git pull command is identical to git fetch plus git merge (previous two commands)
 
 git branch --track style origin/style  		>> add a local branch tracking the remote branch. (--> Branch style set up to track remote branch style from origin.)
 
-git diff --staged				# to examine the changes I have not yet committed
+git diff --staged					# to examine the changes I have not yet committed
 
 
-cd ..                                 		# Bare repos (without working directories) are typically needed for sharing.
+cd ..                                 	# Bare repos (without working directories) are typically needed for sharing.
 git clone --bare hello hello.git		# Creating a bare repository.
-ls hello.git					# Typically repositories ending in ‘.git’ are bare. As you can see there is no working directory in the hello.git repository. 
-						# Actually it is nothing but the .git directory of a non-bare repository.	
+ls hello.git							# Typically repositories ending in ‘.git’ are bare. As you can see there is no working directory in the hello.git repository.
+										# Actually it is nothing but the .git directory of a non-bare repository.
 
 
-cd hello					# To add a bare repo as a remote to our original repo.
+cd hello								# To add a bare repo as a remote to our original repo.
 git remote add shared ../hello.git		# Let’s add the hello.git repository to our original repository.
 
-gitk HEAD @{u}					# to see merge conflicts
+gitk HEAD @{u}							# to see merge conflicts
 
 
 git reset --hard <COMMIT -ID>
-git reset --hard HEAD~<n>			# command to revert the commit
+git reset --hard HEAD~<n>				# command to revert the commit
 git reset --help
 
-git reflog 					# history of what's been happening on the head of your branches
+git reflog 								# history of what's been happening on the head of your branches
 
 
-git [log|diff] origin/master..HEAD					
-git log --graph [--all|<branch name>] --decorate --oneline				# Viewing Unpushed Git Commits			
+git [log|diff] origin/master..HEAD
+git log --graph [--all|<branch name>] --decorate --oneline				# Viewing Unpushed Git Commits
 gitk --all
 
-									# To push up through a given commit, you can write:
-             								# git - pushing specific commit
-git push <remotename> <commit SHA>:<remotebranchname>			# provided <remotebranchname> already exists on the remote. 
-									# (If it doesn't, you can use git push <remotename> <commit SHA>:refs/heads/<remotebranchname> to autocreate it.)
+																# To push up through a given commit, you can write:
+             													# git - pushing specific commit
+git push <remotename> <commit SHA>:<remotebranchname>			# provided <remotebranchname> already exists on the remote.
+																# (If it doesn't, you can use git push <remotename> <commit SHA>:refs/heads/<remotebranchname> to autocreate it.)
 
 git push [-f] <remote name> <local_branch_name>:<remote_brnch_name> 	# pushing to remote from non local branch, for more: https:#git-scm.com/book/en/v2/Git-Internals-The-Refspec (-f: forece)
- 
-git push -u origin <branch> 						# push a new local branch to a remote Git repository and tracks it too & -u is short for --set-upstream
+
+git push -u origin <branch> 							# push a new local branch to a remote Git repository and tracks it too & -u is short for --set-upstream
 
 
-remote show [remote] || git ls-remote [remote]				# get a full list of remote references and its information  (https:#git-scm.com/book/en/v2/Git-Branching-Remote-Branches)
+remote show [remote] || git ls-remote [remote]			# get a full list of remote references and its information  (https:#git-scm.com/book/en/v2/Git-Branching-Remote-Branches)
 
-git show <treeish>							# to see changes of a commit
+git show <treeish>										# to see changes of a commit
 
-git show <treeish>:<file>						# seeing a specific commit change in a file
+git show <treeish>:<file>								# seeing a specific commit change in a file
 
-git show HEAD~n:<file>							# to want to go back 'n' commits from our current HEAD in file
+git show HEAD~n:<file>									# to want to go back 'n' commits from our current HEAD in file
 
-git difftool <commit> [<commit>] file1.txt        			# to see the diff between two commits
+git difftool <commit> [<commit>] file1.txt        		# to see the diff between two commits
 
-git difftool <commmit>:file_1 <commit>:file_2				# same as above
+git difftool <commmit>:file_1 <commit>:file_2			# same as above
 
-git branch --no-merged master						# to list branches with commits not merged into master
+git branch --no-merged master							# to list branches with commits not merged into master
 
-git cherry -v master <branch>						# to list the relevant commits
+git cherry -v master <branch>							# to list the relevant commits
 
 
 
@@ -85,30 +85,14 @@ git cherry -v master <branch>						# to list the relevant commits
 
 git push <remote name> --delete <branch name>				# this deletes the remote branch
 
-git branch -d <branch name>						# this deletes local branch, you have to delete from anither branch
+git branch -d <branch name>									# this deletes local branch, you have to delete from anither branch
 
-'git branch -D <branch name>						# delete forcefully (deleting branch with unmerged commits)
+'git branch -D <branch name>								# delete forcefully (deleting branch with unmerged commits)
 
-git checkout <branch name> &&  git branch --unset-upstream		# stop tracking remote branch 
+git checkout <branch name> &&  git branch --unset-upstream	# stop tracking remote branch
 
-git clean -[n | f]							# to delete untracked files, f-force, n-shows filess to be deleted
+git clean -[n | f]											# to delete untracked files, f-force, n-shows filess to be deleted
 
-git remote prune origin [--dry-run]					# clean up remote branches, dry-run show which branches are to be removed									
+git remote prune origin [--dry-run]							# clean up remote branches, dry-run show which branches are to be removed
 
-
-
-
-
-
-
-
-
-					
-
-
-
-
-
-
-
-
+git fetch --prune											# to clean up remote branches this no longer exixts
