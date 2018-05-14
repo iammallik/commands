@@ -1,0 +1,4 @@
+java -version
+which java
+export JAVA_HOME=/home/user/jdk1.7.0_02/
+export PATH=$PATH:$JAVA_HOME/bin
