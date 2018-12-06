@@ -1,0 +1,3 @@
+rvm gemset create teddy
+rvm gemset list
+rvm gemset use teddy [--default]

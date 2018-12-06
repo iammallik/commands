@@ -65,20 +65,21 @@ git push -u origin <branch> 							# push a new local branch to a remote Git rep
 
 remote show [remote] || git ls-remote [remote]			# get a full list of remote references and its information  (https:#git-scm.com/book/en/v2/Git-Branching-Remote-Branches)
 
-git show <treeish>										# to see changes of a commit
+git show <treeish>																# to see changes of a commit
 
-git show <treeish>:<file>								# seeing a specific commit change in a file
+git show <treeish>:<file>														# seeing a specific commit change in a file
 
-git show HEAD~n:<file>									# to want to go back 'n' commits from our current HEAD in file
+git show HEAD~n:<file>														# to want to go back 'n' commits from our current HEAD in file
 
-git difftool <commit> [<commit>] file1.txt        		# to see the diff between two commits
+git difftool <commit> [<commit>] file1.txt        	# to see the diff between two commits
 
 git difftool <commmit>:file_1 <commit>:file_2			# same as above
 
-git branch --no-merged master							# to list branches with commits not merged into master
+git branch --no-merged master												# to list branches with commits not merged into master
 
-git cherry -v master <branch>							# to list the relevant commits
+git cherry -v master <branch>											# to list the relevant commits
 
+git stash branch newbranch [<stash_id>]							#  == git checkout -b newbranch + git stash pop [git stash apply]
 
 
 									--Deleting branches--
